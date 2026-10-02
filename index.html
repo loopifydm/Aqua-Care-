@@ -1,14 +1,174 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Aqua Care RO System</title><style>body{font-family:Arial,sans-serif;margin:0;color:#123B5D;background:#fff}header{background:#fff;border-bottom:1px solid #ddd;padding:14px 6%;display:flex;align-items:center;gap:28px;position:sticky;top:0}header img{width:90px;height:90px;object-fit:contain}nav a{margin:0 10px;color:#123B5D;text-decoration:none;font-weight:700}.hero{padding:70px 6%;background:linear-gradient(135deg,#fff 0 55%,#eaf9ff 55%)}h1{font-size:clamp(38px,6vw,64px);margin:0 0 18px;color:#123B5D}.hero p{max-width:680px;font-size:20px;line-height:1.6}.btn{display:inline-block;padding:14px 20px;border-radius:10px;text-decoration:none;font-weight:700;margin:8px 8px 0 0}.primary{background:#00A9E8;color:#fff}.secondary{border:2px solid #8BC53F;color:#123B5D}.section{padding:58px 6%}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}.card{border:1px solid #dce8ef;border-radius:16px;padding:22px;background:#fff;box-shadow:0 8px 24px rgba(18,59,93,.07)}.accent{border-top:5px solid #8BC53F}.contact{background:#123B5D;color:#fff}.contact a{color:#fff}.contact input,.contact textarea{width:100%;box-sizing:border-box;padding:12px;margin:7px 0;border-radius:8px;border:0}.contact button{background:#8BC53F;border:0;padding:13px 18px;border-radius:8px;font-weight:700;color:#123B5D}footer{padding:25px 6%;background:#0d2d47;color:#fff}.logoMark{display:flex;align-items:center;gap:12px;font-size:20px;font-weight:800}@media(max-width:800px){header{flex-wrap:wrap}nav{display:none}}</style></head>
-<body><header><div class="logoMark"><img src="assets/aqua-care-logo.jpg" alt="Aqua Care RO System logo">Aqua Care RO System</div><nav><a href="#services">Services</a><a href="#products">Products</a><a href="#care">Customer Care</a><a href="#enquiry">Service Enquiry</a><a href="#contact">Contact</a></nav></header>
-<section class="hero"><h1>Complete Water Solutions for Home & Business</h1><p>Reliable RO systems, water softeners, filtration and service support from Aqua Care RO System, Coimbatore.</p><a class="btn primary" href="#enquiry">Book a Service</a><a class="btn secondary" href="https://wa.me/919843369469?text=Hello%20Aqua%20Care%2C%20I%20need%20a%20water%20solution." target="_blank">WhatsApp Us</a></section>
-<section class="section" id="services"><h2>Services</h2><div class="grid"><div class="card accent"><h3>Installation & Commissioning</h3><p>Professional setup for domestic and commercial systems.</p></div><div class="card accent"><h3>Service & Maintenance</h3><p>Routine maintenance, repairs and filter replacement.</p></div><div class="card accent"><h3>Water Treatment Solutions</h3><p>RO, softening, iron removal, UV and filtration systems.</p></div><div class="card accent"><h3>Customer Care</h3><p>Track service needs, follow-ups and future maintenance.</p></div></div></section>
-<section class="section" id="products"><h2>Products & Solutions</h2><div class="grid"><div class="card">Domestic RO Plant</div><div class="card">Commercial RO Plant</div><div class="card">50L RO Plant</div><div class="card">Water Softener Plant</div><div class="card">Iron Removal Filter</div><div class="card">Micron Filter</div><div class="card">Pressure Sand Filter</div><div class="card">Activated Carbon Filter</div><div class="card">De-Mineralise Plant</div><div class="card">Ultra Violet Plant</div><div class="card">Sewage Treatment Plant</div><div class="card">Super Vac Equipment</div></div></section>
-<section class="section" id="care"><h2>Customer Care</h2><div class="grid"><div class="card"><h3>Need Service?</h3><p>Submit an enquiry and our team can follow up with you.</p></div><div class="card"><h3>Need a New RO?</h3><p>Tell us your water source, usage and location for a suitable solution.</p></div><div class="card"><h3>Need Replacement Filters?</h3><p>Contact Aqua Care for maintenance and replacement support.</p></div></div></section>
-<section class="section contact" id="enquiry"><h2>Service Enquiry</h2><form id="serviceForm"><input id="name" required placeholder="Your name"><input id="phone" required placeholder="Phone number"><input id="area" placeholder="Area"><input id="service" placeholder="Service required"><input id="preferredDate" type="date"><textarea id="message" rows="4" placeholder="Tell us what you need"></textarea><button type="submit">Submit Enquiry</button></form><p id="msg"></p></section>
-<section class="section" id="contact"><h2>Contact Aqua Care</h2><p>#13, 1st Floor, A.K.S. Nagar, Thadagam Road, Near Gandhipark, Coimbatore - 641 001</p><p>Phone: +91 422 2576566 | Mobile: +91 98946 94999 | +91 98946 44999</p><p>Email: <a href="mailto:aquacarecbe@gmail.com">aquacarecbe@gmail.com</a></p><a class="btn primary" href="tel:+919894694999">Call Now</a></section>
-<footer>Aqua Care RO System — Water Treatment & Service Solutions, Coimbatore.</footer>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script>
-const SUPABASE_URL='https://unexjewenkbegaefnpsz.supabase.co',SUPABASE_KEY='sb_publishable_8aU4JE6TjH-x1TTH2qPbTA_aZ7Fjz_p';const db=window.supabase.createClient(SUPABASE_URL,SUPABASE_KEY);
-document.getElementById('serviceForm').addEventListener('submit',async e=>{e.preventDefault();const payload={name:name.value.trim(),phone:phone.value.trim(),area:area.value.trim(),service:service.value.trim(),preferred_date:preferredDate.value||null,message:message.value.trim()};const m=document.getElementById('msg');const {error}=await db.from('aqua_service_requests').insert(payload);if(error){m.textContent='Unable to submit online. Please call or WhatsApp Aqua Care.';return}m.textContent='Enquiry received. Aqua Care will contact you.';const wa='Hello Aqua Care, I submitted a service enquiry. Name: '+payload.name+' Phone: '+payload.phone+' Service: '+payload.service;window.open('https://wa.me/919843369469?text='+encodeURIComponent(wa),'_blank');e.target.reset();});
-</script></body></html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Aqua Care RO System Coimbatore — premium domestic and commercial RO, water treatment and service solutions.">
+<title>Aqua Care RO System | Premium Water Solutions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#00A9E8;--green:#8BC53F;--navy:#123B5D;--ink:#18384e;--muted:#61788a;--soft:#eefaff;--line:#dbeaf2;--white:#fff;--shadow:0 20px 60px rgba(18,59,93,.10)}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;font-family:"DM Sans",sans-serif;color:var(--ink);background:#fbfdfe}
+h1,h2,h3{font-family:Manrope,sans-serif;color:var(--navy);margin-top:0}
+a{text-decoration:none;color:inherit}
+.container{width:min(1180px,92%);margin:auto}
+.topbar{background:var(--navy);color:#fff;font-size:13px;padding:9px 0}
+.topbar .container{display:flex;justify-content:space-between;gap:15px}
+.topbar span{opacity:.9}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(219,234,242,.8)}
+.nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:30px}
+.brand{display:flex;align-items:center;gap:12px;min-width:240px}
+.brand img{width:62px;height:62px;object-fit:contain}
+.brand strong{font-family:Manrope;font-size:17px;color:var(--navy);line-height:1.1}
+.brand small{display:block;color:var(--blue);font-size:11px;font-weight:700;letter-spacing:1.4px;margin-top:4px}
+nav{display:flex;align-items:center;gap:25px}
+nav a{font-size:14px;font-weight:700;color:var(--navy)}
+nav a:hover{color:var(--blue)}
+.navCta{background:var(--blue);color:#fff!important;padding:12px 17px;border-radius:10px;box-shadow:0 8px 20px rgba(0,169,232,.22)}
+.hero{position:relative;overflow:hidden;padding:96px 0 82px;background:linear-gradient(135deg,#fff 0%,#f8fdff 48%,#eaf9ff 100%)}
+.hero:before{content:"";position:absolute;width:540px;height:540px;border-radius:50%;right:-180px;top:-170px;background:radial-gradient(circle,#bdeeff 0,#eaf9ff 55%,transparent 70%)}
+.hero:after{content:"";position:absolute;width:280px;height:280px;border-radius:50%;right:130px;bottom:-170px;border:42px solid rgba(139,197,63,.12)}
+.heroGrid{display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:55px;position:relative;z-index:2}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;background:#e9f9ff;color:#007faf;border:1px solid #c9effd;padding:8px 13px;border-radius:99px;font-size:12px;font-weight:800;letter-spacing:1.1px;text-transform:uppercase}
+.dot{width:7px;height:7px;background:var(--green);border-radius:50%}
+.hero h1{font-size:clamp(42px,5.5vw,72px);line-height:1.03;letter-spacing:-2.5px;margin:20px 0}
+.hero h1 em{font-style:normal;color:var(--blue)}
+.hero p{font-size:18px;line-height:1.75;color:var(--muted);max-width:650px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:15px 21px;border-radius:11px;font-weight:800;font-size:14px;transition:.2s;border:1px solid transparent}
+.btn:hover{transform:translateY(-2px)}
+.primary{background:var(--blue);color:#fff;box-shadow:0 12px 25px rgba(0,169,232,.25)}
+.outline{border-color:var(--green);color:var(--navy);background:#fff}
+.heroCard{background:#fff;border:1px solid rgba(219,234,242,.95);border-radius:28px;padding:18px;box-shadow:var(--shadow);transform:rotate(1deg)}
+.heroCard img{width:100%;display:block;border-radius:18px;object-fit:cover}
+.heroCard .caption{display:flex;justify-content:space-between;align-items:center;padding:15px 5px 3px}
+.heroCard strong{font-family:Manrope;color:var(--navy)}
+.badge{background:#eff9e5;color:#527b16;padding:7px 10px;border-radius:99px;font-size:11px;font-weight:800}
+.stats{margin-top:-28px;position:relative;z-index:4}
+.statsBox{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);display:grid;grid-template-columns:repeat(4,1fr);overflow:hidden}
+.stat{padding:23px;text-align:center;border-right:1px solid var(--line)}
+.stat:last-child{border:0}.stat strong{display:block;font:800 27px Manrope;color:var(--navy)}.stat span{font-size:12px;color:var(--muted);font-weight:600}
+.section{padding:90px 0}
+.sectionHead{max-width:720px;margin-bottom:38px}.kicker{color:var(--blue);font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase}.section h2{font-size:clamp(30px,4vw,44px);letter-spacing:-1.2px;margin:9px 0 12px}.sectionHead p{color:var(--muted);line-height:1.7}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:25px;box-shadow:0 8px 30px rgba(18,59,93,.05);transition:.25s}
+.card:hover{transform:translateY(-5px);box-shadow:0 18px 45px rgba(18,59,93,.11);border-color:#bce7f7}
+.icon{width:44px;height:44px;border-radius:13px;background:#e9f9ff;display:grid;place-items:center;color:var(--blue);font-weight:900;margin-bottom:19px}
+.card h3{font-size:17px;margin-bottom:9px}.card p{color:var(--muted);font-size:14px;line-height:1.65;margin:0}
+.band{background:var(--navy);color:#fff;position:relative;overflow:hidden}.band:after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;right:-150px;top:-190px;border:70px solid rgba(139,197,63,.12)}
+.band h2{color:#fff}.band p{color:#bdd1df}.bandGrid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;position:relative;z-index:2}
+.checks{display:grid;gap:12px;margin-top:25px}.check{display:flex;gap:10px;align-items:flex-start;color:#eaf6fc;font-size:14px}.check b{color:var(--green)}
+.products{grid-template-columns:repeat(3,1fr)}
+.product{position:relative;overflow:hidden;min-height:150px;background:linear-gradient(145deg,#fff,#f5fbfe)}
+.product:before{content:"";position:absolute;width:85px;height:85px;border-radius:50%;right:-30px;top:-30px;background:rgba(0,169,232,.08)}
+.product .number{font:800 12px Manrope;color:var(--green);letter-spacing:1px}
+.product h3{margin:13px 0 7px}
+.care{background:#f4fbfe}
+.care .card{background:#fff}
+.enquiry{padding:90px 0;background:linear-gradient(135deg,#eafbff,#fff 55%,#f2fae9)}
+.formBox{display:grid;grid-template-columns:.8fr 1.2fr;gap:45px;align-items:start}
+.formIntro h2{font-size:43px}.formIntro p{color:var(--muted);line-height:1.75}.quick{margin-top:28px;display:grid;gap:10px}.quick a{font-weight:800;color:var(--navy)}
+form{background:#fff;padding:28px;border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow)}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+input,textarea{width:100%;padding:14px 15px;border:1px solid #d6e5ec;border-radius:10px;font:inherit;color:var(--navy);outline:none;background:#fbfdfe}
+textarea{min-height:120px;resize:vertical}.full{grid-column:1/-1}input:focus,textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(0,169,232,.10)}
+form button{width:100%;border:0;margin-top:13px;cursor:pointer}.success{color:#2f7412;font-weight:700;font-size:14px}
+.contact{padding:70px 0;background:#fff}.contactGrid{display:grid;grid-template-columns:1.3fr .7fr;gap:25px}.contactPanel{padding:30px;border-radius:20px;background:var(--navy);color:#fff}.contactPanel h3{color:#fff}.contactPanel p{color:#c8d8e3;line-height:1.7}.contactPanel a{color:#fff;font-weight:700}.info{display:grid;gap:15px}.infoItem{padding:18px;background:#f6fbfd;border:1px solid var(--line);border-radius:13px}.infoItem small{display:block;color:var(--muted);margin-bottom:4px}
+footer{background:#0b2b43;color:#b9ccd8;padding:28px 0;font-size:13px}.footerFlex{display:flex;justify-content:space-between;gap:20px;align-items:center}.footerBrand{color:#fff;font-family:Manrope;font-weight:800}
+@media(max-width:950px){nav{display:none}.heroGrid,.bandGrid,.formBox,.contactGrid{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}.products{grid-template-columns:1fr 1fr}.hero{padding-top:65px}.heroCard{max-width:650px;margin:auto}.statsBox{grid-template-columns:1fr 1fr}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+@media(max-width:600px){.topbar .container{justify-content:center}.topbar span:last-child{display:none}.nav{height:72px}.brand img{width:52px;height:52px}.brand strong{font-size:15px}.hero h1{letter-spacing:-1.5px}.cards,.products,.fields{grid-template-columns:1fr}.statsBox{grid-template-columns:1fr 1fr}.section{padding:65px 0}.footerFlex{flex-direction:column;align-items:flex-start}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="container"><span>Premium Water Treatment & Service Solutions • Coimbatore</span><span>Call +91 422 2576566</span></div></div>
+<header><div class="container nav">
+<a class="brand" href="#">
+<img src="assets/aqua-care-logo.jpg" alt="Aqua Care RO System">
+<span><strong>Aqua Care<br>RO System</strong><small>PURE WATER. SMART SOLUTIONS.</small></span>
+</a>
+<nav><a href="#services">Services</a><a href="#solutions">Solutions</a><a href="#products">Products</a><a href="#care">Customer Care</a><a href="#contact">Contact</a><a class="navCta" href="#enquiry">Get Service</a></nav>
+</div></header>
+
+<main>
+<section class="hero"><div class="container heroGrid">
+<div>
+<span class="eyebrow"><i class="dot"></i> Trusted water solutions in Coimbatore</span>
+<h1>Better water.<br><em>Better living.</em></h1>
+<p>From home RO systems to commercial water treatment, Aqua Care delivers dependable solutions with professional installation, service and long-term customer support.</p>
+<div class="actions"><a class="btn primary" href="#enquiry">Book a Service →</a><a class="btn outline" href="https://wa.me/919843369469?text=Hello%20Aqua%20Care%2C%20I%20need%20a%20water%20solution." target="_blank" rel="noopener">WhatsApp Aqua Care</a></div>
+</div>
+<div class="heroCard"><img src="assets/aqua-care-logo.jpg" alt="Aqua Care brand"><div class="caption"><strong>Complete Water Care</strong><span class="badge">Home • Business • Industry</span></div></div>
+</div></section>
+
+<div class="stats"><div class="container"><div class="statsBox"><div class="stat"><strong>12+</strong><span>Years of experience</span></div><div class="stat"><strong>360°</strong><span>Water treatment support</span></div><div class="stat"><strong>24/7</strong><span>Enquiry access</span></div><div class="stat"><strong>Coimbatore</strong><span>Local service focus</span></div></div></div></div>
+
+<section class="section" id="services"><div class="container"><div class="sectionHead"><span class="kicker">What we do</span><h2>Water care, handled professionally.</h2><p>One partner for installation, maintenance, filtration and water treatment — designed around your actual water requirements.</p></div>
+<div class="cards">
+<div class="card"><div class="icon">01</div><h3>Installation</h3><p>Professional installation and commissioning for domestic and commercial systems.</p></div>
+<div class="card"><div class="icon">02</div><h3>Service & Maintenance</h3><p>Planned maintenance, repairs, filter changes and service follow-ups.</p></div>
+<div class="card"><div class="icon">03</div><h3>Water Treatment</h3><p>RO, softening, iron removal, UV and multi-stage filtration solutions.</p></div>
+<div class="card"><div class="icon">04</div><h3>Customer Care</h3><p>Keep your system supported with enquiry tracking and future service reminders.</p></div>
+</div></div></section>
+
+<section class="section band" id="solutions"><div class="container bandGrid"><div><span class="kicker">A complete solution</span><h2>Not just an RO machine.<br>A complete water-care partner.</h2><p>We help identify the right treatment approach instead of pushing a one-size-fits-all product.</p><div class="checks"><div class="check"><b>✓</b> Domestic & commercial water systems</div><div class="check"><b>✓</b> Water softener and iron removal solutions</div><div class="check"><b>✓</b> UV, micron, carbon and sand filtration</div><div class="check"><b>✓</b> Installation, maintenance and service support</div></div></div><div class="card"><div class="icon">A</div><h3>Need help choosing?</h3><p>Tell us your location, water source and requirement. Our team can guide you toward a suitable water treatment setup.</p><a class="btn primary" href="#enquiry">Talk to Aqua Care →</a></div></div></section>
+
+<section class="section" id="products"><div class="container"><div class="sectionHead"><span class="kicker">Solutions portfolio</span><h2>Built for different water needs.</h2><p>Explore treatment systems for homes, offices, commercial facilities and specialised applications.</p></div>
+<div class="cards products">
+<div class="card product"><span class="number">01 / RO</span><h3>Domestic RO Plant</h3><p>Purification solutions for everyday household drinking water.</p></div>
+<div class="card product"><span class="number">02 / RO</span><h3>Commercial RO Plant</h3><p>Higher-capacity RO solutions for commercial requirements.</p></div>
+<div class="card product"><span class="number">03 / RO</span><h3>50L RO Plant</h3><p>Compact high-capacity solution for suitable applications.</p></div>
+<div class="card product"><span class="number">04 / WSP</span><h3>Water Softener</h3><p>Solutions for hard-water treatment and scale reduction.</p></div>
+<div class="card product"><span class="number">05 / IRF</span><h3>Iron Removal Filter</h3><p>Water treatment support where iron is a concern.</p></div>
+<div class="card product"><span class="number">06 / FILTRATION</span><h3>Micron / PSF / ACF</h3><p>Multi-stage filtration using micron, sand and activated carbon filters.</p></div>
+<div class="card product"><span class="number">07 / UV</span><h3>Ultra Violet Plant</h3><p>UV-based treatment as part of an appropriate purification setup.</p></div>
+<div class="card product"><span class="number">08 / DMP</span><h3>De-Mineralise Plant</h3><p>Specialised demineralisation solutions for specific water needs.</p></div>
+<div class="card product"><span class="number">09 / STP</span><h3>Sewage Treatment Plant</h3><p>Treatment solutions for suitable commercial and institutional applications.</p></div>
+</div></div></section>
+
+<section class="section care" id="care"><div class="container"><div class="sectionHead"><span class="kicker">Customer care</span><h2>Stay with Aqua Care after the sale.</h2><p>Good service should continue long after installation. Make maintenance and support easier with a direct service channel.</p></div><div class="cards">
+<div class="card"><div class="icon">↻</div><h3>Service Enquiry</h3><p>Raise a service request without searching for a technician separately.</p></div>
+<div class="card"><div class="icon">✓</div><h3>Maintenance Support</h3><p>Plan filter changes and routine servicing around your system's needs.</p></div>
+<div class="card"><div class="icon">+</div><h3>Upgrade Assistance</h3><p>When your water requirement changes, speak to Aqua Care before replacing the entire setup.</p></div>
+<div class="card"><div class="icon">☎</div><h3>Direct Contact</h3><p>Call, WhatsApp or submit the enquiry form and our team can follow up.</p></div>
+</div></div></section>
+
+<section class="enquiry" id="enquiry"><div class="container formBox"><div class="formIntro"><span class="kicker">Service desk</span><h2>How can we help?</h2><p>Submit your requirement and share a preferred date. Your enquiry goes directly into Aqua Care's service workflow for follow-up.</p><div class="quick"><a href="tel:+919894694999">☎ +91 98946 94999</a><a href="https://wa.me/919843369469" target="_blank" rel="noopener">◉ WhatsApp: +91 98433 69469</a><span>Coimbatore & surrounding service areas</span></div></div>
+<form id="serviceForm"><div class="fields"><input id="name" required placeholder="Full name"><input id="phone" required placeholder="Mobile number"><input id="area" placeholder="Area / Location"><input id="service" placeholder="Service required"><input id="preferredDate" class="full" type="date"><textarea id="message" class="full" placeholder="Tell us about your RO / water treatment requirement"></textarea></div><button class="btn primary" type="submit">Submit Service Enquiry →</button><p id="msg"></p></form></div></section>
+
+<section class="contact" id="contact"><div class="container contactGrid"><div class="contactPanel"><h3>Aqua Care RO System</h3><p>Professional water purification and treatment solutions for homes, businesses and specialised requirements.</p><p><strong>Address</strong><br>#13, 1st Floor, A.K.S. Nagar, Thadagam Road,<br>Near Gandhipark, Coimbatore - 641 001</p><a class="btn primary" href="tel:+919894694999">Call Aqua Care</a></div><div class="info"><div class="infoItem"><small>Phone</small><strong>+91 422 2576566</strong></div><div class="infoItem"><small>Mobile</small><strong>+91 98946 94999 / +91 98946 44999</strong></div><div class="infoItem"><small>Email</small><strong><a href="mailto:aquacarecbe@gmail.com">aquacarecbe@gmail.com</a></strong></div></div></div></section>
+</main>
+<footer><div class="container footerFlex"><span class="footerBrand">Aqua Care RO System</span><span>Premium water treatment & service solutions • Coimbatore</span></div></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+const SUPABASE_URL='https://unexjewenkbegaefnpsz.supabase.co';
+const SUPABASE_KEY='sb_publishable_8aU4JE6TjH-x1TTH2qPbTA_aZ7Fjz_p';
+const db=window.supabase.createClient(SUPABASE_URL,SUPABASE_KEY);
+const form=document.getElementById('serviceForm');
+form.addEventListener('submit',async e=>{
+ e.preventDefault();
+ const payload={
+  name:document.getElementById('name').value.trim(),
+  phone:document.getElementById('phone').value.trim(),
+  area:document.getElementById('area').value.trim(),
+  service:document.getElementById('service').value.trim(),
+  preferred_date:document.getElementById('preferredDate').value||null,
+  message:document.getElementById('message').value.trim()
+ };
+ const msg=document.getElementById('msg');
+ msg.className='';
+ msg.textContent='Sending your enquiry...';
+ const {error}=await db.from('aqua_service_requests').insert(payload);
+ if(error){msg.textContent='Unable to submit online. Please call or WhatsApp Aqua Care.';return}
+ msg.className='success';
+ msg.textContent='Enquiry received. Aqua Care will contact you shortly.';
+ const wa='Hello Aqua Care, I submitted a service enquiry. Name: '+payload.name+' Phone: '+payload.phone+' Service: '+payload.service;
+ window.open('https://wa.me/919843369469?text='+encodeURIComponent(wa),'_blank');
+ form.reset();
+});
+</script>
+</body>
+</html>
