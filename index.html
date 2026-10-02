@@ -21,7 +21,7 @@ a{text-decoration:none;color:inherit}
 header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(219,234,242,.8)}
 .nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:30px}
 .brand{display:flex;align-items:center;gap:12px;min-width:240px}
-.brand img{width:62px;height:62px;object-fit:contain}
+.brand img{width:76px;height:58px;object-fit:cover;object-position:center;border-radius:10px}
 .brand strong{font-family:Manrope;font-size:17px;color:var(--navy);line-height:1.1}
 .brand small{display:block;color:var(--blue);font-size:11px;font-weight:700;letter-spacing:1.4px;margin-top:4px}
 nav{display:flex;align-items:center;gap:25px}
@@ -42,9 +42,7 @@ nav a:hover{color:var(--blue)}
 .btn:hover{transform:translateY(-2px)}
 .primary{background:var(--blue);color:#fff;box-shadow:0 12px 25px rgba(0,169,232,.25)}
 .outline{border-color:var(--green);color:var(--navy);background:#fff}
-.heroCard{background:#fff;border:1px solid rgba(219,234,242,.95);border-radius:28px;padding:18px;box-shadow:var(--shadow);transform:rotate(1deg)}
-.heroCard img{width:100%;display:block;border-radius:18px;object-fit:cover}
-.heroCard .caption{display:flex;justify-content:space-between;align-items:center;padding:15px 5px 3px}
+.heroCard{background:linear-gradient(145deg,#ffffff 0%,#eefaff 65%,#f5fae9 100%);border:1px solid rgba(219,234,242,.95);border-radius:28px;padding:28px;box-shadow:var(--shadow);min-height:430px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}.heroCard:before{content:"";position:absolute;width:330px;height:330px;border-radius:50%;background:rgba(0,169,232,.10);right:-100px;top:-90px}.heroCard:after{content:"";position:absolute;width:260px;height:260px;border-radius:50%;border:34px solid rgba(139,197,63,.16);left:-110px;bottom:-110px}.waterVisual{position:relative;z-index:2;text-align:center}.drop{width:190px;height:240px;margin:0 auto 22px;background:linear-gradient(155deg,#24c5f4,#008fd0);border-radius:62% 38% 62% 38%;transform:rotate(45deg);box-shadow:0 25px 45px rgba(0,143,208,.22);position:relative}.drop:after{content:"";position:absolute;width:55px;height:100px;left:45px;top:35px;border-radius:50%;background:rgba(255,255,255,.18);transform:rotate(-45deg)}.ring{position:absolute;width:280px;height:95px;border:15px solid var(--green);border-radius:50%;left:50%;top:120px;transform:translateX(-50%) rotate(-9deg);z-index:3}.waterTitle{font:800 24px Manrope;color:var(--navy);position:relative;z-index:4}.waterSub{font-size:12px;letter-spacing:1.8px;color:var(--blue);font-weight:800;margin-top:7px;position:relative;z-index:4}.heroCard .caption{display:flex;justify-content:space-between;align-items:center;padding:18px 2px 0;position:relative;z-index:4}
 .heroCard strong{font-family:Manrope;color:var(--navy)}
 .badge{background:#eff9e5;color:#527b16;padding:7px 10px;border-radius:99px;font-size:11px;font-weight:800}
 .stats{margin-top:-28px;position:relative;z-index:4}
@@ -100,10 +98,10 @@ footer{background:#0b2b43;color:#b9ccd8;padding:28px 0;font-size:13px}.footerFle
 <p>From home RO systems to commercial water treatment, Aqua Care delivers dependable solutions with professional installation, service and long-term customer support.</p>
 <div class="actions"><a class="btn primary" href="#enquiry">Book a Service →</a><a class="btn outline" href="https://wa.me/919843369469?text=Hello%20Aqua%20Care%2C%20I%20need%20a%20water%20solution." target="_blank" rel="noopener">WhatsApp Aqua Care</a></div>
 </div>
-<div class="heroCard"><img src="assets/aqua-care-logo.jpg" alt="Aqua Care brand"><div class="caption"><strong>Complete Water Care</strong><span class="badge">Home • Business • Industry</span></div></div>
+<div class="heroCard"><div class="waterVisual"><div class="drop"><div class="ring"></div></div><div class="waterTitle">Aqua Care</div><div class="waterSub">PURE WATER • SMART SOLUTIONS</div></div><div class="caption"><strong>Complete Water Care</strong><span class="badge">Home • Business • Industry</span></div></div>
 </div></section>
 
-<div class="stats"><div class="container"><div class="statsBox"><div class="stat"><strong>12+</strong><span>Years of experience</span></div><div class="stat"><strong>360°</strong><span>Water treatment support</span></div><div class="stat"><strong>24/7</strong><span>Enquiry access</span></div><div class="stat"><strong>Coimbatore</strong><span>Local service focus</span></div></div></div></div>
+<div class="stats"><div class="container"><div class="statsBox"><div class="stat"><strong>19+</strong><span>Years of experience</span></div><div class="stat"><strong>360°</strong><span>Water treatment support</span></div><div class="stat"><strong>24/7</strong><span>Enquiry access</span></div><div class="stat"><strong>Coimbatore</strong><span>Local service focus</span></div></div></div></div>
 
 <section class="section" id="services"><div class="container"><div class="sectionHead"><span class="kicker">What we do</span><h2>Water care, handled professionally.</h2><p>One partner for installation, maintenance, filtration and water treatment — designed around your actual water requirements.</p></div>
 <div class="cards">
