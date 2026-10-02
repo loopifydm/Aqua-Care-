@@ -20,8 +20,8 @@ a{text-decoration:none;color:inherit}
 .topbar span{opacity:.9}
 header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(219,234,242,.8)}
 .nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:30px}
-.brand{display:flex;align-items:center;gap:11px;min-width:255px}
-.brandMark{width:58px;height:58px;display:block;flex:0 0 58px}
+.brand{display:flex;align-items:center;gap:10px;min-width:275px}
+.brandLogo{width:76px;height:76px;display:block;flex:0 0 76px;object-fit:contain;object-position:center}
 .brand strong{font-family:Manrope;font-size:17px;color:var(--navy);line-height:1.08;letter-spacing:-.3px}
 .brand small{display:block;color:var(--blue);font-size:11px;font-weight:700;letter-spacing:1.4px;margin-top:4px}
 nav{display:flex;align-items:center;gap:25px}
@@ -77,21 +77,14 @@ form button{width:100%;border:0;margin-top:13px;cursor:pointer}.success{color:#2
 .contact{padding:70px 0;background:#fff}.contactGrid{display:grid;grid-template-columns:1.3fr .7fr;gap:25px}.contactPanel{padding:30px;border-radius:20px;background:var(--navy);color:#fff}.contactPanel h3{color:#fff}.contactPanel p{color:#c8d8e3;line-height:1.7}.contactPanel a{color:#fff;font-weight:700}.info{display:grid;gap:15px}.infoItem{padding:18px;background:#f6fbfd;border:1px solid var(--line);border-radius:13px}.infoItem small{display:block;color:var(--muted);margin-bottom:4px}
 footer{background:#0b2b43;color:#b9ccd8;padding:28px 0;font-size:13px}.footerFlex{display:flex;justify-content:space-between;gap:20px;align-items:center}.footerBrand{color:#fff;font-family:Manrope;font-weight:800}
 @media(max-width:950px){nav{display:none}.heroGrid,.bandGrid,.formBox,.contactGrid{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}.products{grid-template-columns:1fr 1fr}.hero{padding-top:65px}.heroCard{max-width:650px;margin:auto}.statsBox{grid-template-columns:1fr 1fr}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}}
-@media(max-width:600px){.topbar .container{justify-content:center}.topbar span:last-child{display:none}.nav{height:72px}.brandMark{width:50px;height:50px;flex-basis:50px}.brand strong{font-size:15px}.hero h1{letter-spacing:-1.5px}.cards,.products,.fields{grid-template-columns:1fr}.statsBox{grid-template-columns:1fr 1fr}.section{padding:65px 0}.footerFlex{flex-direction:column;align-items:flex-start}}
+@media(max-width:600px){.topbar .container{justify-content:center}.topbar span:last-child{display:none}.nav{height:72px}.brandLogo{width:58px;height:58px;flex-basis:58px}.brand strong{font-size:15px}.hero h1{letter-spacing:-1.5px}.cards,.products,.fields{grid-template-columns:1fr}.statsBox{grid-template-columns:1fr 1fr}.section{padding:65px 0}.footerFlex{flex-direction:column;align-items:flex-start}}
 </style>
 </head>
 <body>
 <div class="topbar"><div class="container"><span>Premium Water Treatment & Service Solutions • Coimbatore</span><span>Call +91 422 2576566</span></div></div>
 <header><div class="container nav">
 <a class="brand" href="#">
-<span class="brandMark" aria-label="Aqua Care logo" role="img">
-<svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-<defs><linearGradient id="aquaDrop" x1="18" y1="8" x2="61" y2="70" gradientUnits="userSpaceOnUse"><stop stop-color="#24C5F4"/><stop offset="1" stop-color="#008FD0"/></linearGradient></defs>
-<path d="M40 5C40 5 16 34 16 49.5C16 63.2 26.7 74 40 74C53.3 74 64 63.2 64 49.5C64 34 40 5 40 5Z" fill="url(#aquaDrop)"/>
-<ellipse cx="40" cy="53" rx="30" ry="12" transform="rotate(-10 40 53)" fill="none" stroke="#8BC53F" stroke-width="5.5"/>
-<path d="M21 44C24 34 30 25 36 17" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" opacity=".45"/>
-</svg>
-</span>
+<img class="brandLogo" src="assets/aqua-care-logo.jpg" alt="Aqua Care RO System">
 <span><strong>Aqua Care<br>RO System</strong><small>PURE WATER. SMART SOLUTIONS.</small></span>
 </a>
 <nav><a href="#services">Services</a><a href="#solutions">Solutions</a><a href="#products">Products</a><a href="#care">Customer Care</a><a href="#contact">Contact</a><a class="navCta" href="#enquiry">Get Service</a></nav>
