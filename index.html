@@ -42,7 +42,7 @@ nav a:hover{color:var(--blue)}
 .btn:hover{transform:translateY(-2px)}
 .primary{background:var(--blue);color:#fff;box-shadow:0 12px 25px rgba(0,169,232,.25)}
 .outline{border-color:var(--green);color:var(--navy);background:#fff}
-.heroCard{background:linear-gradient(145deg,#ffffff 0%,#eefaff 65%,#f5fae9 100%);border:1px solid rgba(219,234,242,.95);border-radius:28px;padding:28px;box-shadow:var(--shadow);min-height:430px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}.heroCard:before{content:"";position:absolute;width:330px;height:330px;border-radius:50%;background:rgba(0,169,232,.10);right:-100px;top:-90px}.heroCard:after{content:"";position:absolute;width:260px;height:260px;border-radius:50%;border:34px solid rgba(139,197,63,.16);left:-110px;bottom:-110px}.waterVisual{position:relative;z-index:2;text-align:center}.drop{width:190px;height:240px;margin:0 auto 22px;background:linear-gradient(155deg,#24c5f4,#008fd0);border-radius:62% 38% 62% 38%;transform:rotate(45deg);box-shadow:0 25px 45px rgba(0,143,208,.22);position:relative}.drop:after{content:"";position:absolute;width:55px;height:100px;left:45px;top:35px;border-radius:50%;background:rgba(255,255,255,.18);transform:rotate(-45deg)}.ring{position:absolute;width:280px;height:95px;border:15px solid var(--green);border-radius:50%;left:50%;top:120px;transform:translateX(-50%) rotate(-9deg);z-index:3}.waterTitle{font:800 24px Manrope;color:var(--navy);position:relative;z-index:4}.waterSub{font-size:12px;letter-spacing:1.8px;color:var(--blue);font-weight:800;margin-top:7px;position:relative;z-index:4}.heroCard .caption{display:flex;justify-content:space-between;align-items:center;padding:18px 2px 0;position:relative;z-index:4}
+.heroCard{background:linear-gradient(145deg,#ffffff 0%,#eefaff 65%,#f5fae9 100%);border:1px solid rgba(219,234,242,.95);border-radius:28px;padding:28px;box-shadow:var(--shadow);min-height:430px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}.heroCard:before{content:"";position:absolute;width:330px;height:330px;border-radius:50%;background:rgba(0,169,232,.10);right:-100px;top:-90px}.heroCard:after{content:"";position:absolute;width:260px;height:260px;border-radius:50%;border:34px solid rgba(139,197,63,.16);left:-110px;bottom:-110px}.waterVisual{position:relative;z-index:2;text-align:center}.purifierVisual{width:min(100%,420px);margin:0 auto 8px}.purifierVisual svg{display:block;width:100%;height:auto}.waterTitle{font:800 24px Manrope;color:var(--navy);position:relative;z-index:4}.waterSub{font-size:12px;letter-spacing:1.8px;color:var(--blue);font-weight:800;margin-top:7px;position:relative;z-index:4}.heroCard .caption{display:flex;justify-content:space-between;align-items:center;padding:18px 2px 0;position:relative;z-index:4}
 .heroCard strong{font-family:Manrope;color:var(--navy)}
 .badge{background:#eff9e5;color:#527b16;padding:7px 10px;border-radius:99px;font-size:11px;font-weight:800}
 .stats{margin-top:-28px;position:relative;z-index:4}
@@ -105,7 +105,34 @@ footer{background:#0b2b43;color:#b9ccd8;padding:28px 0;font-size:13px}.footerFle
 <p>From home RO systems to commercial water treatment, Aqua Care delivers dependable solutions with professional installation, service and long-term customer support.</p>
 <div class="actions"><a class="btn primary" href="#enquiry">Book a Service →</a><a class="btn outline" href="https://wa.me/919843369469?text=Hello%20Aqua%20Care%2C%20I%20need%20a%20water%20solution." target="_blank" rel="noopener">WhatsApp Aqua Care</a></div>
 </div>
-<div class="heroCard"><div class="waterVisual"><div class="drop"><div class="ring"></div></div><div class="waterTitle">Aqua Care</div><div class="waterSub">PURE WATER • SMART SOLUTIONS</div></div><div class="caption"><strong>Complete Water Care</strong><span class="badge">Home • Business • Industry</span></div></div>
+<div class="heroCard"><div class="waterVisual">
+<div class="purifierVisual" aria-label="Modern Aqua Care RO water purifier illustration">
+<svg viewBox="0 0 420 390" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+<defs>
+<linearGradient id="bodyG" x1="80" y1="30" x2="330" y2="350" gradientUnits="userSpaceOnUse"><stop stop-color="#ffffff"/><stop offset="1" stop-color="#e8f8fd"/></linearGradient>
+<linearGradient id="panelG" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#12b7ec"/><stop offset="1" stop-color="#007fbf"/></linearGradient>
+<filter id="shadow" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="18" stdDeviation="16" flood-color="#123b5d" flood-opacity=".16"/></filter>
+</defs>
+<ellipse cx="210" cy="354" rx="130" ry="18" fill="#123b5d" opacity=".09"/>
+<g filter="url(#shadow)">
+<rect x="100" y="28" width="220" height="306" rx="34" fill="url(#bodyG)" stroke="#d4e9f1" stroke-width="2"/>
+<rect x="125" y="62" width="170" height="92" rx="20" fill="url(#panelG)"/>
+<circle cx="210" cy="107" r="34" fill="#ffffff" opacity=".16"/>
+<path d="M210 80c-17 23-23 34-23 46a23 23 0 0 0 46 0c0-12-6-23-23-46Z" fill="#fff"/>
+<path d="M202 123c3 5 8 8 14 8" fill="none" stroke="#8bc53f" stroke-width="4" stroke-linecap="round"/>
+<text x="210" y="181" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#123b5d">AQUA CARE</text>
+<text x="210" y="202" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" font-weight="700" letter-spacing="2" fill="#00a9e8">PURE WATER</text>
+<rect x="142" y="224" width="136" height="8" rx="4" fill="#d9edf4"/>
+<rect x="142" y="242" width="105" height="8" rx="4" fill="#d9edf4"/>
+<circle cx="263" cy="246" r="10" fill="#8bc53f"/>
+<path d="M174 286h72" stroke="#00a9e8" stroke-width="5" stroke-linecap="round"/>
+<path d="M210 334v26" stroke="#123b5d" stroke-width="5" stroke-linecap="round"/>
+<path d="M180 360h60" stroke="#123b5d" stroke-width="5" stroke-linecap="round"/>
+</g>
+<circle cx="350" cy="74" r="26" fill="#8bc53f" opacity=".18"/>
+<circle cx="70" cy="292" r="42" fill="#00a9e8" opacity=".09"/>
+</svg></div>
+<div class="waterTitle">Aqua Care</div><div class="waterSub">PURE WATER • SMART SOLUTIONS</div></div><div class="caption"><strong>Complete Water Care</strong><span class="badge">Home • Business • Industry</span></div></div>
 </div></section>
 
 <div class="stats"><div class="container"><div class="statsBox"><div class="stat"><strong>19+</strong><span>Years of experience</span></div><div class="stat"><strong>360°</strong><span>Water treatment support</span></div><div class="stat"><strong>24/7</strong><span>Enquiry access</span></div><div class="stat"><strong>Coimbatore</strong><span>Local service focus</span></div></div></div></div>
